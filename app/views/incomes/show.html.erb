@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Cashsales:</strong>
+  <%= @income.cashSales %>
+</p>
+
+<p>
+  <strong>Salesreturns:</strong>
+  <%= @income.salesReturns %>
+</p>
+
+<p>
+  <strong>Totalsales:</strong>
+  <%= @income.totalSales %>
+</p>
+
+<p>
+  <strong>Paymentonaccount:</strong>
+  <%= @income.paymentOnAccount %>
+</p>
+
+<p>
+  <strong>Client:</strong>
+  <%= @income.client %>
+</p>
+
+<p>
+  <strong>Note:</strong>
+  <%= @income.note %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @income.date %>
+</p>
+
+<p>
+  <strong>Hst:</strong>
+  <%= @income.hst %>
+</p>
+
+<%= link_to 'Edit', edit_income_path(@income) %> |
+<%= link_to 'Back', incomes_path %>
