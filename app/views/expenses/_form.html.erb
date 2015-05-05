@@ -20,6 +20,9 @@
     <%= f.text_field :category_id %>
   </div>
   <div class="field">
+	<%= f.select(:category_id, Category.all.collect {|c| [c.name, c.id] } ) %>
+  </div>
+  <div class="field">
     <%= f.label :note %><br>
     <%= f.text_field :note %>
   </div>
