@@ -13,25 +13,15 @@
 
 
 <ul class="nav nav-tabs">
-  <li role="presentation" class="dropdown">
-    <%= link_to "Incomes", incomes_path %>
-    <%= link_to "Expenses", expenses_path %>
-    <%= link_to "Clients", clients_path %>
-    <%= link_to "Categories", categories_path, class: "dropdown-toggle" %>
-    <ul class="dropdown-menu" role="menu">
-    	    <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-            <li class="divider"></li>
-            <li><a href="#">One more separated link</a></li>
-    </ul>
-  </li>
+  <li role="presentation"><%= link_to "Incomes", incomes_path %></li>
+  <li role="presentation"><%= link_to "Expenses", expenses_path %></li>
+  <li role="presentation"><%= link_to "Clients", clients_path %></li>
+  <li role="presentation"><%= link_to "Categories", categories_path %></li>
 </ul>
 
-
-<%= yield %>
+<div class="container">
+  <%= yield %>
+</div>
 
 </body>
 </html>
