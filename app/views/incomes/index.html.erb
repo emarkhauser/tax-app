@@ -1,18 +1,18 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Incomes</h1>
+<h1>Incomes</h1>
 
 <table class="table table-striped table-bordered">
   <thead>
     <tr>
-      <th>Cashsales</th>
-      <th>Salesreturns</th>
-      <th>Totalsales</th>
-      <th>Paymentonaccount</th>
-      <th>Client</th>
-      <th>Note</th>
       <th>Date</th>
+      <th>Client</th>
+      <th>Cash Sales</th>
       <th>Hst</th>
+      <th>Total Sales</th>
+      <th>Payment on Account</th>
+      <th>Sales Returns</th>
+      <th>Note</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -20,14 +20,14 @@
   <tbody>
     <% @incomes.each do |income| %>
       <tr>
+        <td><%= income.date %></td>
+        <td><% if income.client != nil %><%= income.client.name %><% end %></td>
         <td><%= income.cashSales %></td>
-        <td><%= income.salesReturns %></td>
+        <td><%= income.hst %></td>
         <td><%= income.totalSales %></td>
         <td><%= income.paymentOnAccount %></td>
-        <td><% if income.client != nil %><%= income.client.name %><% end %></td>
+        <td><%= income.salesReturns %></td>
         <td><%= income.note %></td>
-        <td><%= income.date %></td>
-        <td><%= income.hst %></td>
         <td><%= link_to 'Show', income %></td>
         <td><%= link_to 'Edit', edit_income_path(income) %></td>
         <td><%= link_to 'Destroy', income, method: :delete, data: { confirm: 'Are you sure?' } %></td>
