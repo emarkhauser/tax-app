@@ -1,15 +1,15 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Expenses</h1>
+<h1>Expenses</h1>
 
 <table class="table table-striped table-bordered">
   <thead>
     <tr>
-      <th>Amount</th>
-      <th>Category</th>
       <th>Note</th>
       <th>Date</th>
+      <th>Amount</th>
       <th>Hst</th>
+      <th>Category</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -17,14 +17,14 @@
   <tbody>
     <% @expenses.each do |expense| %>
       <tr>
+        <td><%= expense.note %></td>
+        <td><%= expense.date %></td>
         <td><%= expense.amount %></td>
+        <td><%= expense.hst %></td>
         <td><% if expense.category != nil %>
 		<%= expense.category.name %>
 	    <% end %>
 	</td>
-        <td><%= expense.note %></td>
-        <td><%= expense.date %></td>
-        <td><%= expense.hst %></td>
         <td><%= link_to 'Show', expense %></td>
         <td><%= link_to 'Edit', edit_expense_path(expense) %></td>
         <td><%= link_to 'Destroy', expense, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -35,4 +35,4 @@
 
 <br>
 
-<%= link_to 'New Expense', new_expense_path %>
+<button type="button" class="btn btn-primary"><%= link_to 'New Expense', new_expense_path %></button>
