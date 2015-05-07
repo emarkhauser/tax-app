@@ -7,7 +7,9 @@
 
 <p>
   <strong>Category:</strong>
-  <%= @expense.category.name %>
+  <% if @expense.category != nil %>
+    <%= @expense.category.name %>
+  <% end %>
 </p>
 
 <p>

@@ -24,7 +24,7 @@
         <td><%= income.salesReturns %></td>
         <td><%= income.totalSales %></td>
         <td><%= income.paymentOnAccount %></td>
-        <td><%= income.client.name %></td>
+        <td><% if income.client != nil %><%= income.client.name %><% end %></td>
         <td><%= income.note %></td>
         <td><%= income.date %></td>
         <td><%= income.hst %></td>

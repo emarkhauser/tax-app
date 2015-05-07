@@ -18,7 +18,10 @@
     <% @expenses.each do |expense| %>
       <tr>
         <td><%= expense.amount %></td>
-        <td><%= expense.category.name %></td>
+        <td><% if expense.category != nil %>
+		<%= expense.category.name %>
+	    <% end %>
+	</td>
         <td><%= expense.note %></td>
         <td><%= expense.date %></td>
         <td><%= expense.hst %></td>

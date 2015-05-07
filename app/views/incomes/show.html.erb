@@ -22,7 +22,9 @@
 
 <p>
   <strong>Client:</strong>
+  <% if @income.client != nil %>
   <%= @income.client.name %>
+  <% end %>
 </p>
 
 <p>
