@@ -1,13 +1,25 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <strong>Date:</strong>
+  <%= @income.date %>
+</p>
+
+<p>
+  <strong>Client:</strong>
+  <% if @income.client != nil %>
+  <%= @income.client.name %>
+  <% end %>
+</p>
+
+<p>
   <strong>Cashsales:</strong>
   <%= @income.cashSales %>
 </p>
 
 <p>
-  <strong>Salesreturns:</strong>
-  <%= @income.salesReturns %>
+  <strong>Hst:</strong>
+  <%= @income.hst %>
 </p>
 
 <p>
@@ -20,11 +32,10 @@
   <%= @income.paymentOnAccount %>
 </p>
 
+
 <p>
-  <strong>Client:</strong>
-  <% if @income.client != nil %>
-  <%= @income.client.name %>
-  <% end %>
+  <strong>Salesreturns:</strong>
+  <%= @income.salesReturns %>
 </p>
 
 <p>
@@ -32,15 +43,6 @@
   <%= @income.note %>
 </p>
 
-<p>
-  <strong>Date:</strong>
-  <%= @income.date %>
-</p>
-
-<p>
-  <strong>Hst:</strong>
-  <%= @income.hst %>
-</p>
 
 <%= link_to 'Edit', edit_income_path(@income) %> |
 <%= link_to 'Back', incomes_path %>

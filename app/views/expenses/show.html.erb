@@ -1,18 +1,6 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Amount:</strong>
-  <%= @expense.amount %>
-</p>
-
-<p>
-  <strong>Category:</strong>
-  <% if @expense.category != nil %>
-    <%= @expense.category.name %>
-  <% end %>
-</p>
-
-<p>
   <strong>Note:</strong>
   <%= @expense.note %>
 </p>
@@ -23,8 +11,20 @@
 </p>
 
 <p>
+  <strong>Amount:</strong>
+  <%= @expense.amount %>
+</p>
+
+<p>
   <strong>Hst:</strong>
   <%= @expense.hst %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <% if @expense.category != nil %>
+    <%= @expense.category.name %>
+  <% end %>
 </p>
 
 <%= link_to 'Edit', edit_expense_path(@expense) %> |

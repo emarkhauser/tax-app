@@ -12,14 +12,6 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :amount %><br>
-    <%= f.text_field :amount %>
-  </div>
-  <div class="field">
-    <%= f.label :category %><br>
-	<%= f.select(:category_id, Category.all.collect {|c| [c.name, c.id] } ) %>
-  </div>
-  <div class="field">
     <%= f.label :note %><br>
     <%= f.text_field :note %>
   </div>
@@ -28,9 +20,18 @@
     <%= f.date_select :date %>
   </div>
   <div class="field">
+    <%= f.label :amount %><br>
+    <%= f.text_field :amount %>
+  </div>
+  <div class="field">
     <%= f.label :hst %><br>
     <%= f.text_field :hst %>
   </div>
+  <div class="field">
+    <%= f.label :category %><br>
+	<%= f.select(:category_id, Category.all.collect {|c| [c.name, c.id] } ) %>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

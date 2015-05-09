@@ -12,12 +12,20 @@
   <% end %>
 
   <div class="field">
+    <%= f.label :client_id %><br>
+    <%= f.select :client_id, Client.all.collect {|c| [c.name, c.id]} %>
+  </div>
+  <div class="field">
+    <%= f.label :date %><br>
+    <%= f.date_select :date %>
+  </div>
+  <div class="field">
     <%= f.label :cashSales %><br>
     <%= f.text_field :cashSales %>
   </div>
   <div class="field">
-    <%= f.label :salesReturns %><br>
-    <%= f.text_field :salesReturns %>
+    <%= f.label :hst %><br>
+    <%= f.text_field :hst %>
   </div>
   <div class="field">
     <%= f.label :totalSales %><br>
@@ -28,21 +36,15 @@
     <%= f.text_field :paymentOnAccount %>
   </div>
   <div class="field">
-    <%= f.label :client_id %><br>
-    <%= f.select :client_id, Client.all.collect {|c| [c.name, c.id]} %>
+    <%= f.label :salesReturns %><br>
+    <%= f.text_field :salesReturns %>
   </div>
   <div class="field">
     <%= f.label :note %><br>
     <%= f.text_field :note %>
   </div>
-  <div class="field">
-    <%= f.label :date %><br>
-    <%= f.date_select :date %>
-  </div>
-  <div class="field">
-    <%= f.label :hst %><br>
-    <%= f.text_field :hst %>
-  </div>
+
+
   <div class="actions">
     <%= f.submit %>
   </div>
