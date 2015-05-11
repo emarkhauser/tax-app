@@ -1,4 +1,4 @@
-<%= form_for(@income) do |f| %>
+<%= form_for @income, :html => {:class => "form-horizontal"} do |f| %>
   <% if @income.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@income.errors.count, "error") %> prohibited this income from being saved:</h2>
@@ -11,41 +11,41 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="field form-group">
     <%= f.label :client_id %><br>
-    <%= f.select :client_id, Client.all.collect {|c| [c.name, c.id]} %>
+    <%= f.select :client_id, Client.all.collect {|c| [c.name, c.id]}, {}, {:class => "form-control"} %>
   </div>
-  <div class="field">
+  <div class="field form-group">
     <%= f.label :date %><br>
-    <%= f.date_select :date %>
+    <%= f.date_select :date, {:class => "form-control"} %>
   </div>
-  <div class="field">
+  <div class="field form-group">
     <%= f.label :cashSales %><br>
-    <%= f.text_field :cashSales %>
+    <%= f.text_field :cashSales, {:class => "form-control"} %>
   </div>
-  <div class="field">
+  <div class="field form-group">
     <%= f.label :hst %><br>
-    <%= f.text_field :hst %>
+    <%= f.text_field :hst, {:class => "form-control"} %>
   </div>
-  <div class="field">
+  <div class="field form-group">
     <%= f.label :totalSales %><br>
-    <%= f.text_field :totalSales %>
+    <%= f.text_field :totalSales, {:class => "form-control"} %>
   </div>
-  <div class="field">
+  <div class="field form-group">
     <%= f.label :paymentOnAccount %><br>
-    <%= f.text_field :paymentOnAccount %>
+    <%= f.text_field :paymentOnAccount, {:class => "form-control"} %>
   </div>
-  <div class="field">
+  <div class="field form-group">
     <%= f.label :salesReturns %><br>
-    <%= f.text_field :salesReturns %>
+    <%= f.text_field :salesReturns, {:class => "form-control"} %>
   </div>
-  <div class="field">
+  <div class="field form-group">
     <%= f.label :note %><br>
-    <%= f.text_field :note %>
+    <%= f.text_field :note, {:class => "form-control"} %>
   </div>
 
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit nil, {:class => "btn btn-success"} %>
   </div>
 <% end %>
