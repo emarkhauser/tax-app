@@ -9,6 +9,7 @@
       <th>Date</th>
       <th>Amount</th>
       <th>Hst</th>
+      <th>Total</th>
       <th>Category</th>
       <th colspan="3"></th>
     </tr>
@@ -21,6 +22,7 @@
         <td><%= expense.date %></td>
         <td><%= expense.amount %></td>
         <td><%= expense.hst %></td>
+	<td><%= expense.total %></td>
         <td><% if expense.category != nil %>
 		<%= expense.category.name %>
 	    <% end %>

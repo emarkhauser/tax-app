@@ -21,6 +21,11 @@
 </p>
 
 <p>
+  <strong>Total:</strong>
+  <%= @expense.total %>
+</p>
+
+<p>
   <strong>Category:</strong>
   <% if @expense.category != nil %>
     <%= @expense.category.name %>
