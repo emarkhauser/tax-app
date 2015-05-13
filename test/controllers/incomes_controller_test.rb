@@ -18,7 +18,7 @@ class IncomesControllerTest < ActionController::TestCase
 
   test "should create income" do
     assert_difference('Income.count') do
-      post :create, income: { cashSales: @income.cashSales, client_id: @income.client_id, date: @income.date, hst: @income.hst, note: @income.note, paymentOnAccount: @income.paymentOnAccount, salesReturns: @income.salesReturns, totalSales: @income.totalSales }
+      post :create, income: { cashSales: @income.cashSales, client_id: @income.client_id, date: @income.date, hst: @income.hst, income_type: @income.income_type, paymentOnAccount: @income.paymentOnAccount, salesReturns: @income.salesReturns, totalSales: @income.totalSales }
     end
 
     assert_redirected_to income_path(assigns(:income))
@@ -35,7 +35,7 @@ class IncomesControllerTest < ActionController::TestCase
   end
 
   test "should update income" do
-    patch :update, id: @income, income: { cashSales: @income.cashSales, client_id: @income.client_id, date: @income.date, hst: @income.hst, note: @income.note, paymentOnAccount: @income.paymentOnAccount, salesReturns: @income.salesReturns, totalSales: @income.totalSales }
+    patch :update, id: @income, income: { cashSales: @income.cashSales, client_id: @income.client_id, date: @income.date, hst: @income.hst, income_type: @income.income_type, paymentOnAccount: @income.paymentOnAccount, salesReturns: @income.salesReturns, totalSales: @income.totalSales }
     assert_redirected_to income_path(assigns(:income))
   end
 

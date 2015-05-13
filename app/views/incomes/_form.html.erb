@@ -12,12 +12,16 @@
   <% end %>
 
   <div class="field form-group">
+    <%= f.label :date %><br>
+    <%= f.date_select :date, {:class => "form-control"} %>
+  </div>
+  <div class="field form-group">
     <%= f.label :client_id %><br>
     <%= f.select :client_id, Client.all.collect {|c| [c.name, c.id]}, {}, {:class => "form-control"} %>
   </div>
   <div class="field form-group">
-    <%= f.label :date %><br>
-    <%= f.date_select :date, {:class => "form-control"} %>
+    <%= f.label :income_type %><br>
+    <%= f.text_field :income_type, {:class => "form-control"} %>
   </div>
   <div class="field form-group">
     <%= f.label :cashSales %><br>
@@ -28,6 +32,10 @@
     <%= f.text_field :hst, {:class => "form-control"} %>
   </div>
   <div class="field form-group">
+    <%= f.label :salesReturns %><br>
+    <%= f.text_field :salesReturns, {:class => "form-control"} %>
+  </div>
+  <div class="field form-group">
     <%= f.label :totalSales %><br>
     <%= f.text_field :totalSales, {:class => "form-control"} %>
   </div>
@@ -35,14 +43,7 @@
     <%= f.label :paymentOnAccount %><br>
     <%= f.text_field :paymentOnAccount, {:class => "form-control"} %>
   </div>
-  <div class="field form-group">
-    <%= f.label :salesReturns %><br>
-    <%= f.text_field :salesReturns, {:class => "form-control"} %>
-  </div>
-  <div class="field form-group">
-    <%= f.label :note %><br>
-    <%= f.text_field :note, {:class => "form-control"} %>
-  </div>
+
 
 
   <div class="actions">
