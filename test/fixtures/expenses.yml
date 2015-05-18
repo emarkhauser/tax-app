@@ -2,14 +2,16 @@
 
 one:
   amount: 9.99
-  category_id: 
+  category_id: 1 
   note: MyString
   date: 2015-04-28
   hst: 9.99
+  total: 19.98
 
 two:
   amount: 9.99
-  category_id: 
+  category_id: 1 
   note: MyString
   date: 2015-04-28
   hst: 9.99
+  total: 19.98

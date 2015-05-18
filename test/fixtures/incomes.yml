@@ -5,7 +5,7 @@ one:
   salesReturns: 9.99
   totalSales: 9.99
   paymentOnAccount: 9.99
-  client_id: 
+  client_id: 1 
   income_type: MyString
   date: 2015-04-28
   hst: 9.99
@@ -15,7 +15,7 @@ two:
   salesReturns: 9.99
   totalSales: 9.99
   paymentOnAccount: 9.99
-  client_id: 
+  client_id: 1
   income_type: MyString
   date: 2015-04-28
   hst: 9.99

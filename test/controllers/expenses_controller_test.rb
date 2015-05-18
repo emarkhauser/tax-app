@@ -18,7 +18,7 @@ class ExpensesControllerTest < ActionController::TestCase
 
   test "should create expense" do
     assert_difference('Expense.count') do
-      post :create, expense: { amount: @expense.amount, category_id: @expense.category_id, date: @expense.date, hst: @expense.hst, note: @expense.note }
+      post :create, expense: { total: @expense.total, amount: @expense.amount, category_id: @expense.category_id, date: @expense.date, hst: @expense.hst, note: @expense.note }
     end
 
     assert_redirected_to expense_path(assigns(:expense))
@@ -35,7 +35,7 @@ class ExpensesControllerTest < ActionController::TestCase
   end
 
   test "should update expense" do
-    patch :update, id: @expense, expense: { amount: @expense.amount, category_id: @expense.category_id, date: @expense.date, hst: @expense.hst, note: @expense.note }
+    patch :update, id: @expense, expense: { total: @expense.total, amount: @expense.amount, category_id: @expense.category_id, date: @expense.date, hst: @expense.hst, note: @expense.note }
     assert_redirected_to expense_path(assigns(:expense))
   end
 
