@@ -4,6 +4,8 @@ gem 'bootstrap-sass', '3.2.0.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
+#To make the password digest, has_secure_password uses a hash function called bcrypt
+gem 'bcrypt', '3.1.7'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use SCSS for stylesheets
