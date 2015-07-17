@@ -1,10 +1,13 @@
 
 
 Rails.application.routes.draw do
+  get 'users/new'
+
   resources :incomes
   resources :expenses
   resources :clients
   resources :categories
+  resources :users
   get 'welcome/index'
 
   # The priority is based upon order of creation: first created -> highest priority.
