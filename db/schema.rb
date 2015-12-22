@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20150519235008) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "categories", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at", null: false
@@ -36,7 +39,7 @@ ActiveRecord::Schema.define(version: 20150519235008) do
     t.decimal  "total"
   end
 
-  add_index "expenses", ["category_id"], name: "index_expenses_on_category_id"
+  add_index "expenses", ["category_id"], name: "index_expenses_on_category_id", using: :btree
 
   create_table "incomes", force: :cascade do |t|
     t.decimal  "cashSales"
@@ -51,7 +54,7 @@ ActiveRecord::Schema.define(version: 20150519235008) do
     t.datetime "updated_at",       null: false
   end
 
-  add_index "incomes", ["client_id"], name: "index_incomes_on_client_id"
+  add_index "incomes", ["client_id"], name: "index_incomes_on_client_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "name"
@@ -61,4 +64,6 @@ ActiveRecord::Schema.define(version: 20150519235008) do
     t.string   "password_digest"
   end
 
+  add_foreign_key "expenses", "categories"
+  add_foreign_key "incomes", "clients"
 end

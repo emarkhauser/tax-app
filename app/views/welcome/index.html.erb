@@ -1,2 +1,8 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+<h1>Tax Application</h1>
+
+<ul>
+<li><%= link_to "Income", {:controller => 'incomes', :action => 'index'}%></li>
+<li><%= link_to "Expenses", {:controller => 'expenses', :action => 'index'}%></li>
+<li><%= link_to "Clients", {:controller => 'clients', :action => 'index'}%></li>
+<li><%= link_to "Categories", {:controller => 'categories', :action => 'index'}%></li>
+</ul>
